@@ -8,9 +8,9 @@ PK=`$ONTOLOGY account list -v -w $WALLET | grep 'Public key:' | awk '{print $3}'
 echo $PK
 
 # withdraw ong
-echo $PASSWD | $ONTOLOGY asset transfer  --from 1 --to 1 --amount 1 -w $WALLET
+echo $PASSWD | $ONTOLOGY asset transfer  --from 1 --to 1 --amount 1 -w $WALLET --gasprice 0
 sleep 10
-echo $PASSWD | $ONTOLOGY asset withdrawong 1 -w $WALLET
+echo $PASSWD | $ONTOLOGY asset withdrawong 1 -w $WALLET --gasprice 0
 sleep 10
 
 sed -i -e 's/localhost:[0-9]*/localhost:20336/g' config_test.json

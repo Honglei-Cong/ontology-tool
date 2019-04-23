@@ -4,6 +4,7 @@ import (
 	"time"
 
 	sdk "github.com/ontio/ontology-go-sdk"
+	"github.com/ontio/ontology-tool/common"
 	"github.com/ontio/ontology-tool/testframework"
 )
 
@@ -18,7 +19,7 @@ func getAccountByPassword(ctx *testframework.TestFrameworkContext, path string) 
 	//	ctx.LogError("getPassword error:%s", err)
 	//	return nil, false
 	//}
-	user, err := wallet.GetDefaultAccount([]byte("passwordtest"))
+	user, err := wallet.GetDefaultAccount([]byte(common.DefConfig.Password))
 	if err != nil {
 		ctx.LogError("getDefaultAccount error:%s", err)
 		return nil, false
