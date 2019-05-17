@@ -1,5 +1,5 @@
 {
-  "Path": "../ontology/wallet.dat",
+  "User": "AFmseVrdL9f9oyCzZefL9tG6UbviRj6Fv6",
   "AssetId": 0,
-  "ShardUrl": "http://localhost:20336"
+  "ShardUrl": "http://localhost:30336"
 }
